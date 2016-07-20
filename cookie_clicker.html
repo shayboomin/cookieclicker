@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cookie Clicker!</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var counter=0
+		var increment = 1;
+	$("#cookie").click(function(){
+		counter += increment;
+		$("#counter").html("<h1>You have "+counter+" cookies");
+	if (counter>=20){
+		increment = 2;
+	}
+	if (counter>=100){
+		increment = 5;
+	}
+	if (counter>=500){
+		increment = 10;
+	}
+	if (counter>=1000){
+		increment = 50;
+	}
+	if (counter>=5000){
+		increment = 100;
+	}
+	if (counter>=10000){
+		increment = 500;
+	}
+	if (counter>=50000){
+		increment = 1000;
+	}
+	})
+	$("#buy1").click(function(){
+	if (counter>=20){
+		counter-=20;
+			$("#counter").html("<h1>You have "+counter+" cookies")
+			setInterval(function(){
+				counter+=5;
+				$("#counter").html("<h1>You have "+counter+" cookies")
+			}, 5000);
+	}
+	})
+	})
+	</script>
+</head>
+<body>
+<div id="counter">
+	<h1>CLICK ME FAM</h1>
+</div>
+<div id="cookie">
+	<img src="https://images.rapgenius.com/d2424dd103b3c3705a1fa298bd30a104.1000x1000x1.jpg" width="100" height="100">
+</div>
+<div id="auto">
+	<h3>Automatic Power Ups!</h3>
+<div id="Upgrade1"><h4>20 Cookies</h4><p>2 cookies per click</p></div>
+<div id="Upgrade2"><h4>100 Cookies</h4><p>5 cookies per click!</p></div>
+<div id="Upgrade3"><h4>500 Cookies</h4><p>10 cookies per click!!</p></div>
+<div id="Upgrade4"><h4>1000 Cookies</h4><p>20 cookies per click!!!</p></div>
+<div id="Upgrade5"><h4>5000 Cookies</h4><p>50 cookies per click!!!!</p></div>
+<div id="Upgrade6"><h4>10000 Cookies</h4><p>100 cookies per click!!!!</p></div>
+<div id="Upgrade7"><h4>50000 Cookies</h4><p>1000 cookies per click!!!!!!</p></div>
+</div>
+<div id="buyable">
+	<h3>Buyable Power Ups!</h3>
+<div id="buyable1"><h4>20 Cookies</h4><p>2 cookies per 5 sec</p><button id="buy1" type="button">Buy!</button></div>
+<div id="buyable2"><h4>100 Cookies</h4><p>3 cookies per 5 sec!</p><button id="buy2" type="button">Buy!</button></div>
+<div id="buyable3"><h4>500 Cookies</h4><p>5 cookies per 5 sec!!</p><button id="buy3" type="button">Buy!</button></div>
+<div id="buyable4"><h4>1000 Cookies</h4><p>10 cookies per 5 sec!!!</p><button id="buy4" type="button">Buy!</button></div>
+<div id="buyable5"><h4>1500 Cookies</h4><p>15 cookies per 5 sec!!!!</p><button id="buy5" type="button">Buy!</button></div>
+</div>
+</body>
+</html>
